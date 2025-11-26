@@ -1,0 +1,131 @@
+/* ---------- ESTILO GERAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* FUNDO ROSINHA */
+    background: #ffe6f1;
+    color: #c50740;
+    text-align: center;
+}
+
+/* ---------- CENTRALIZAÇÃO DA PÁGINA INICIAL ---------- */
+.center-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+    width: 400px;
+    margin-bottom: 40px; /* botão sobe */
+}
+
+/* ---------- BOTÃO PADRÃO (MAIOR) ---------- */
+.btn {
+    background: #f284b8;
+    color: white;
+    border: none;
+    padding: 12px 26px; /* menor */
+    font-size: 18px;    /* menor */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #e069a8;
+}
+
+/* ---------- CONTAINER DAS PÁGINAS INTERNAS ---------- */
+.container {
+    padding: 25px;
+    max-width: 900px; /* maior para caber o grid */
+    margin: 40px auto;
+}
+
+/* ---------- TÍTULO ---------- */
+.title {
+    color: #e5739e;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ---------- GRID DE CARDS ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+    margin: 0 auto 20px auto;
+}
+
+/* ---------- CARDS DO MENU PRINCIPAL ---------- */
+.card {
+    background: #ffd6ea;
+    padding: 20px;
+    border-radius: 15px;
+    /* removi margin vertical (o gap do grid cuida disso) */
+    box-shadow: 0px 3px 8px crimson;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+    text-decoration: none;
+    color: #c50740;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px; /* altura uniforme dos botões */
+    border: 1px solid #c50740;
+}
+
+.card:hover {
+    background: #ffcae4;
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 480px) {
+    .logo { width: 200px; margin-bottom: 20px; }
+    .btn { padding: 14px 26px; font-size: 18px; }
+    .card { height: 76px; font-size: 16px; padding: 14px; }
+    .container { padding: 18px; margin: 20px auto; }
+}
+
+/* Pequeno ajuste estético do link voltar */
+.container .btn { margin-top: 10px; }
+
+.foto {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    margin: 20px auto 20px auto; /* aumentei a distância */
+    display: block;
+}
+
+.container p {
+    margin-top: 15px; /* aumenta distância da foto */
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: justify;
+}
+.container p {
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;   /* tira as bolinhas */
+    padding-left: 15px; /* mantém o espaço */
+}
